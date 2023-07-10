@@ -4,6 +4,14 @@ const superman = [
       question: "He puts papers in his briefcase __________",
       correctAnswer: "and drives away"
     },
+    {
+        question: "Tall, dark, and __________",
+        correctAnswer: "Superman"
+    },
+    {
+        question: "He's complicated, __________",
+        correctAnswer: "he's irrational"
+    }
   ];
   
 const mine = [
@@ -23,6 +31,18 @@ const mine = [
 {
     question: "Braced myself __________",
     correctAnswer: "for the goodbye"
+},
+{
+    question: "You were in college, working part-time, __________",
+    correctAnswer: "waiting tables"
+},
+{
+    question: "Do you remember all the __________?",
+    correctAnswer: "city lights on the water"
+},
+{
+    question: "I ran out, crying, and you __________",
+    correctAnswer: "followed me out into the street"
 },
 ];
 
@@ -48,9 +68,167 @@ const speak_now = [
     question: 'And they said,  "__________"',
     correctAnswer: "speak now"
 },
+{
+    question: '__________, run away now',
+    correctAnswer: "Don't say yes"
+},
+{
+    question: 'I hear the preacher say, "__________"',
+    correctAnswer: "Speak now or forever hold your peace"
+},
 ];
 
-var obj = { "superman": superman, "speak_now": speak_now, "mine": mine};
+const enchanted = [
+    {
+        question: "Forcing laughter, __________",
+        correctAnswer: "faking smiles"
+    },
+    {
+        question: "Walls of insincerity, __________",
+        correctAnswer: "shifting eyes and vacancy"
+    },
+    {
+        question: "I'm wonderstruck, blushing __________",
+        correctAnswer: "all the way home"
+    },
+    {
+        question: "This night is sparkling, __________",
+        correctAnswer: "don't you let it go"
+    }
+]
+
+const sparks_fly = [
+    {
+        question: "The way you move is like __________",
+        correctAnswer: "a full on rainstorm"
+    },
+    {
+        question: "'Cause I see sparks fly, __________",
+        correctAnswer: "whenever you smile"
+    },
+    {
+        question: "My mind forgets to remind me __________",
+        correctAnswer: "you're a bad idea"
+    },
+    {
+        question: "You find I'm even better than __________",
+        correctAnswer: "you imagined I would be"
+    },
+    {
+        question: "Gimme something that'll haunt me __________",
+        correctAnswer: "when you're not around"
+    },
+    {
+        question: "It's just wrong enough __________",
+        correctAnswer: "to make it feel right"
+    },
+    {
+        question: "Meet me in the __________",
+        correctAnswer: "pouring rain"
+    }
+]
+
+const haunted = [
+    {
+        question: "You and I walk a __________",
+        correctAnswer: "fragile line"
+    },
+    {
+        question: "Stood there and watched you __________",
+        correctAnswer: "walk away"
+    },
+    {
+        question: "Something's gone __________",
+        correctAnswer: "terribly wrong"
+    },
+    {
+        question: "Can't breathe whenever __________",
+        correctAnswer: "you're gone"
+    }
+]
+
+const tsou = [
+    {
+        question: "I used to think one day __________",
+        correctAnswer: "we'd tell the story of us"
+    },
+    {
+        question: "I used to know my place __________",
+        correctAnswer: "was a spot next to you"
+    },
+    {
+        question: "Miscommunications lead to __________",
+        correctAnswer: "fall out"
+    },
+    {
+        question: "See me nervously pulling at __________",
+        correctAnswer: "my clothes"
+    },
+    {
+        question: "How I was losing my mind when __________",
+        correctAnswer: "I saw you here"
+    },
+    {
+        question: "But I liked it better when you __________",
+        correctAnswer: "were on my side"
+    }
+]
+
+const btr = [
+    {
+        question: "The story starts when __________",
+        correctAnswer: "it was hot and it was summer"
+    },
+    {
+        question: "She came along, got him alone, __________",
+        correctAnswer: "and let's hear the applause"
+    },
+    {
+        question: "She's not a saint and __________",
+        correctAnswer: "she's not what you think"
+    },
+    {
+        question: "She looks at life like it's a party and __________",
+        correctAnswer: "she's on the list"
+    },
+    {
+        question: "I'm just another thing for you __________",
+        correctAnswer: "to roll your eyes at honey"
+    },
+    {
+        question: "She took him faster than __________",
+        correctAnswer: "you could say sabotage"
+    }
+]
+
+const mean = [
+    {
+        question: "And swords and weapons __________",
+        correctAnswer: "that you use against me"
+    },
+    {
+        question: "Got me feeling like __________",
+        correctAnswer: "a nothing"
+    },
+    {
+        question: "Someday, I'll be livin' in __________",
+        correctAnswer: "a big old city"
+    },
+    {
+        question: "Someday, I'll be big enough __________",
+        correctAnswer: "so you can't hit me"
+    }
+]
+
+var obj = { "superman": superman, 
+            "speak_now": speak_now, 
+            "mine": mine, 
+            "enchanted": enchanted, 
+            "sparks_fly": sparks_fly,
+            "haunted": haunted,
+            "tsou": tsou,
+            "btr": btr,
+            "mean": mean};
 
   const startButton = document.getElementById("start-btn");
   const nextButton = document.getElementById("next-btn");
@@ -107,13 +285,11 @@ var obj = { "superman": superman, "speak_now": speak_now, "mine": mine};
     songContainerElement.classList.add("hide");
     line.classList.add("hide")
     selectedChoices = Array.from(choicesContainer.querySelectorAll('input[type="checkbox"]:checked')).map(input => input.value);
-    console.log(selectedChoices)
 
     let newQuestions = [];
     selectedChoices.forEach(element => {
       newQuestions = newQuestions.concat(obj[element]);
     });
-    console.log(newQuestions)
   
     shuffledQuestions = newQuestions
       .flat()

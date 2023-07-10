@@ -158,5 +158,24 @@ background-color: #ffcdd2; /* Light red */
     border-top: 2px solid hsl(50.6, 100%, 50%);
 }
 
+.choices-table {
+    display: table;
+    padding-top: 10px;
+    width: 50%;
+}
 
+.left-column, .right-column, .center-column{
+    display: table-cell;
+    vertical-align: top;
+    padding: 0;
+}
+
+.left-column, .center-column{
+    border-right: none;
+}
+
+.choices-table label {
+    display: block;
+    margin-bottom: 0 px;
+}
 
