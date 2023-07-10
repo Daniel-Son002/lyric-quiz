@@ -71,10 +71,25 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
+.correct-answer {
+    background-color: #c8e6c9; /* Light green */
+  }
+  
+.wrong-answer {
+background-color: #ffcdd2; /* Light red */
+}
+
 .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px, 20px;
+}
+
+.next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px, 20px;
+    margin-top: 10px
 }
 
 .controls {
@@ -122,6 +137,25 @@ body.wrong {
 .answer {
     position: inherit;
     padding: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    margin-left: 10px;
+}
+
+.song-submit-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid hsl(50.6, 100%, 50%);
 }
 
 

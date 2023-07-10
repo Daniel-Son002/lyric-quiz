@@ -15,11 +15,21 @@
         </div>
     </header>
     <div class="container">
+        <div class="sub-container" id="song-container">
+            <div id="questionText">Select all the songs from Taylor Swift's Speak Now album:</div>
+            <div id="choices">
+                <label><input type="checkbox" name="choice" value="mine"> Mine</label><br>
+                <label><input type="checkbox" name="choice" value="superman"> Superman</label><br>
+                <label><input type="checkbox" name="choice" value="speak_now"> Speak Now</label><br>
+                <!-- Add more choices as needed -->
+            </div>
+        </div>
+        <hr id="line">
         <div id="question-container" class="hide">
             <div id="question">Question</div>
-            <form>
-                <input type="string" size=75 class="answer">
-                <input type="submit" class="submit-btn btn">
+            <form autocomplete="off">
+                <input type="string" size=75 class="answer" id="answerField">
+                <input type="submit" class="submit-btn btn" id="submit-btn">
             </form>
         </div>
         <div class="controls">
