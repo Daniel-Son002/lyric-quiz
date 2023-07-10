@@ -119,5 +119,10 @@ body.wrong {
     padding: 10px;
 }
 
+.answer {
+    position: inherit;
+    padding: 7px;
+}
+
 
 

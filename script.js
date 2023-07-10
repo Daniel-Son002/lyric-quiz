@@ -117,93 +117,43 @@ function changeImage(a) {
 const questions = [
     {
         question: "He puts papers in his briefcase __________",
-        answers: [
-            { text: "and drives away", correct: true },
-            { text: "takes a big dump", correct: false},
-            { text: "goes to work", correct: false},
-            { text: "mhmmmhhm", correct: false}
-        ]
+        correctAnswer: "and drives away"
     },
     {
         question: "You made a rebel of a __________",
-        answers: [
-            { text: "careless man's careful daughter", correct: true},
-            { text: "careless mom's careful daughter", correct: false},
-            { text: "careless dog's careful daughter", correct: false},
-            { text: "careless monkey's careful daughter", correct: false},
-        ]
+        correctAnswer: "careless man's careful daughter"
     },
     {
         question: "Do you remember, we were sittin' there by the __________",
-        answers: [
-            { text: "poop", correct: false},
-            { text: "lake", correct: false},
-            { text: "water", correct: true},
-            { text: "beach", correct: false},
-        ]
+        correctAnswer: "water"
     },
     {
         question: "You say we'll never __________",
-        answers: [
-            { text: "make it out of this town", correct: false},
-            { text: "make my parents' mistakes", correct: true},
-            { text: "poop", correct: false},
-            { text: "but I know we'll find our way", correct: false},
-        ]
+        correctAnswer: "make my parents' mistakes"
     },
     {
         question: "Braced myself __________",
-        answers: [
-            { text: "for the goodbye", correct: true},
-            { text: "to make my parents' mistakes", correct: false},
-            { text: "massive fart", correct: false},
-            { text: "careless man's careful daughter", correct: false},
-        ]
+        correctAnswer: "for the goodbye"
     },
     {
         question: "Wearing a gown shaped like a __________",
-        answers: [
-            { text: "pastry", correct: true},
-            { text: "dog", correct: false},
-            { text: "donut", correct: false},
-            { text: "croissant", correct: false},
-        ]
+        correctAnswer: "pastry"
     },
     {
         question: "She floats down the aisle like a __________",
-        answers: [
-            { text: "bumblebee", correct: false},
-            { text: "beauty queen", correct: false},
-            { text: "imagined scene", correct: false},
-            { text: "pageant queen", correct: true},
-        ]
+        correctAnswer: "pageant queen"
     },
     {
         question: "There's the silence, __________",
-        answers: [
-            { text: "here's my last chance", correct: false},
-            { text: "there's my last chance", correct: true},
-            { text: "there's my best chance", correct: false},
-            { text: "huzzah", correct: false},
-        ]
+        correctAnswer: "there's my last chance"
     },
     {
         question: "I stand up with shaky hands, __________",
-        answers: [
-            { text: "all feet on me", correct: false},
-            { text: "all eyes on me", correct: true},
-            { text: "call on me", correct: false},
-            { text: "speak now", correct: false},
-        ]
+        correctAnswer: "all eyes on me"
     },
     {
         question: 'And they said,  "__________"',
-        answers: [
-            { text: "speak now", correct: true},
-            { text: "fart now", correct: false},
-            { text: "poop now", correct: false},
-            { text: "eat now", correct: false},
-        ]
+        correctAnswer: "speak now"
     },
 ]
 
