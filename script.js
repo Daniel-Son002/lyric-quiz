@@ -89,6 +89,9 @@ function selectAnswer(e) {
         questionElement.innerText = `You got ${score}` + `/ ${shuffledQuestions.length}`
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
+        startButton.addEventListener("click", () => {
+            score = 0;
+        })
     }
 }
 
@@ -96,7 +99,6 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        console.log('correct')
         element.classList.add('correct')
     } else {
         element.classList.add('wrong')
