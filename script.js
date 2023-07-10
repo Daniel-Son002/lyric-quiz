@@ -4,11 +4,14 @@ const questionContainerElement = document.getElementById("question-container")
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
 const photo = document.getElementsByClassName('TS')
+const scoreValueElement = document.getElementById("scoreValue");
 
 
 var sad = ['sad/sad0', 'sad/sad1', 'sad/sad2', 'sad/sad3', 'sad/sad4'];
 
 var happy = ['happy/happy0', 'happy/happy1', 'happy/happy2', 'happy/happy3', 'happy/happy4', 'happy/happy5', 'happy/happy6'];
+
+var score = 0;
 
 
 let shuffledQuestions, currentQuestionIndex
@@ -74,12 +77,16 @@ function selectAnswer(e) {
     })
     if (correct) {
         changeImage(happy[getRandomNumber(0,6)])
+        score++
+        scoreValueElement.innerText = score.toString();
     } else{
+        alert('stoopid be better')
         changeImage(sad[getRandomNumber(0,4)])
     }
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')    
     } else {
+        questionElement.innerText = `You got ${score}` + `/ ${shuffledQuestions.length}`
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
     }
@@ -90,10 +97,8 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         console.log('correct')
-        // changeImage(happy[getRandomNumber(0,6)])
         element.classList.add('correct')
     } else {
-        // changeImage(sad[getRandomNumber(0,4)])
         element.classList.add('wrong')
     }
 }
@@ -125,5 +130,79 @@ const questions = [
             { text: "careless dog's careful daughter", correct: false},
             { text: "careless monkey's careful daughter", correct: false},
         ]
-    }
+    },
+    {
+        question: "Do you remember, we were sittin' there by the __________",
+        answers: [
+            { text: "poop", correct: false},
+            { text: "lake", correct: false},
+            { text: "water", correct: true},
+            { text: "beach", correct: false},
+        ]
+    },
+    {
+        question: "You say we'll never __________",
+        answers: [
+            { text: "make it out of this town", correct: false},
+            { text: "make my parents' mistakes", correct: true},
+            { text: "poop", correct: false},
+            { text: "but I know we'll find our way", correct: false},
+        ]
+    },
+    {
+        question: "Braced myself __________",
+        answers: [
+            { text: "for the goodbye", correct: true},
+            { text: "to make my parents' mistakes", correct: false},
+            { text: "massive fart", correct: false},
+            { text: "careless man's careful daughter", correct: false},
+        ]
+    },
+    {
+        question: "Wearing a gown shaped like a __________",
+        answers: [
+            { text: "pastry", correct: true},
+            { text: "dog", correct: false},
+            { text: "donut", correct: false},
+            { text: "croissant", correct: false},
+        ]
+    },
+    {
+        question: "She floats down the aisle like a __________",
+        answers: [
+            { text: "bumblebee", correct: false},
+            { text: "beauty queen", correct: false},
+            { text: "imagined scene", correct: false},
+            { text: "pageant queen", correct: true},
+        ]
+    },
+    {
+        question: "There's the silence, __________",
+        answers: [
+            { text: "here's my last chance", correct: false},
+            { text: "there's my last chance", correct: true},
+            { text: "there's my best chance", correct: false},
+            { text: "huzzah", correct: false},
+        ]
+    },
+    {
+        question: "I stand up with shaky hands, __________",
+        answers: [
+            { text: "all feet on me", correct: false},
+            { text: "all eyes on me", correct: true},
+            { text: "call on me", correct: false},
+            { text: "speak now", correct: false},
+        ]
+    },
+    {
+        question: 'And they said,  "__________"',
+        answers: [
+            { text: "speak now", correct: true},
+            { text: "fart now", correct: false},
+            { text: "poop now", correct: false},
+            { text: "eat now", correct: false},
+        ]
+    },
 ]
+
+// mine done
